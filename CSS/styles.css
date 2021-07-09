@@ -247,12 +247,16 @@ a {
 }
 
 .btn--search {
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
 }
 
-.btn--search::before {
-  content: "-->";
-  display: inline-block;
+.btn--search svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
 }
 
 .btn--block {
@@ -290,6 +294,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
+  width: 0;
 }
 
 .input-group .btn {
