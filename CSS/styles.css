@@ -6,6 +6,13 @@
   --color-body: #918ca4;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 /* Typography */
 
 html {
@@ -185,5 +192,75 @@ a {
 /* Icons end */
 
 /* Buttons */
+.btn {
+  border-radius: 100rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem 0;
+}
 
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #3c91ff; /*lighten(--color-primary, 10%); this is SASS*/
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn--secondary:hover {
+  background-color: #31e0ff;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn--accent:hover {
+  background-color: #ff5d34;
+}
+
+.btn--purple {
+  color: var(--color-headings);
+  background-color: white;
+  border: 2px solid var(--color-headings);
+}
+
+.btn--purple:hover {
+  color: white;
+  background-color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
+.btn--search {
+  font-weight: 600;
+}
+
+.btn--search::before {
+  content: "-->";
+  display: inline-block;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
 /* Buttons end */

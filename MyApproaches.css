@@ -1,0 +1,37 @@
+/* Buttons */
+.btn {
+  font-size: 2rem;
+  padding: 2rem 10rem;
+  border: 0;
+  border-radius: 100rem;
+  font-weight: bold;
+  color: white;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+}
+
+.btn--purple {
+  color: var(--color-headings);
+  background-color: white;
+  border: 2px solid var(--color-headings);
+}
+
+.btn--purpleBG {
+  color: white;
+  background-color: var(--color-headings);
+}
+
+.btn--search {
+  padding: 2rem 5rem;
+  font-weight: 600;
+}
+
+.btn--search::before {
+  content: "-->";
+  display: inline-block;
+}
+/* Buttons end */
