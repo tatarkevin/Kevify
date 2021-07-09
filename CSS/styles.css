@@ -90,3 +90,39 @@ a {
 }
 
 /* Links end */
+
+/* Badges */
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+.badge--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
+
+/* Badges end*/
