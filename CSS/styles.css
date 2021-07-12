@@ -579,3 +579,43 @@ a {
   }
 }
 /* Callouts End */
+
+/* Collapsibles */
+.collapsible__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3rem;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+/* Collapsibles End */
