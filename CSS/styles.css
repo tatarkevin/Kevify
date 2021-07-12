@@ -175,12 +175,21 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  height: 30px;
+  width: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
 }
 
 .icon--secondary {
   fill: var(--color-secondary);
+}
+
+.icon--white {
+  fill: white;
 }
 
 .icon-container {
@@ -191,6 +200,10 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background-color: var(--color-accent);
 }
 
 /* Icons end */
@@ -485,3 +498,35 @@ a {
   }
 }
 /* Grids End */
+
+/* Testimonial */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  right: -32px;
+  top: 2rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+/* Testimonial End */
