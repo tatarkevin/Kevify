@@ -126,16 +126,6 @@ a {
   color: white;
 }
 
-@media screen and (min-width: 1024px) {
-  .badge {
-    font-size: 1.5rem;
-  }
-
-  .badge--small {
-    font-size: 1.2rem;
-  }
-}
-
 /* Badges end*/
 
 /* Lists */
@@ -625,7 +615,6 @@ a {
   --vertical-padding: 6rem;
   --vertical-padding-offset: 10rem;
   padding: var(--vertical-padding) 2rem;
-  border: 2px solid red;
 }
 
 .block--dark {
@@ -730,3 +719,33 @@ a {
   }
 }
 /* Navigation Bar End */
+
+/* Domain Block */
+.block-domain .input-group {
+  border: 0;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  max-width: 65%;
+  margin: 4rem auto;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6rem 6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.block-domain__prices > li {
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+/* Domain Block End */
