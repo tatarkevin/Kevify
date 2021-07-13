@@ -786,3 +786,50 @@ a {
   }
 }
 /* Plans Section End*/
+
+/* Features Section */
+.block-features .media {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.block-features .media__image {
+  margin: 0 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature {
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__header {
+  text-align: center;
+}
+.feature__header p {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.block-features-image {
+  max-width: 100%;
+  position: relative;
+  top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .media {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .block-features .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Features Section End */
