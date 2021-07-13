@@ -595,6 +595,7 @@ a {
 /* Callouts End */
 
 /* Collapsibles */
+
 .collapsible__header {
   display: flex;
   align-items: center;
@@ -602,9 +603,11 @@ a {
 }
 
 .collapsible__heading {
+  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 3rem;
+  font-weight: 600;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -622,6 +625,18 @@ a {
   transition: all 0.5s;
   opacity: 0;
   transition-timing-function: ease-in-out;
+}
+
+.collapsible__content > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.collapsible__content > ul > li {
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .collapsible--expanded .collapsible__content {
@@ -642,7 +657,7 @@ a {
 }
 
 .block--dark {
-  background-color: black;
+  background-color: rgb(29, 29, 29);
 }
 
 .block__header {
@@ -704,7 +719,7 @@ a {
 
 .nav__item {
   padding: 0.5rem 2rem;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgb(66, 66, 66);
 }
 
 .nav__item > a {
@@ -865,3 +880,65 @@ a {
   }
 }
 /* Showcase Block End */
+
+/* Footer Section */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerLogo {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.footerLogo > img {
+  margin-bottom: 3rem;
+}
+
+.collapsible__footer {
+  padding: 2rem;
+  border-bottom: 1px solid rgb(66, 66, 66);
+  width: 100%;
+}
+
+.collapsible__footer li {
+  white-space: nowrap;
+}
+
+.collapsible__footer li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1140px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .collapsible__footer {
+    border: none;
+  }
+
+  .collapsible__footer .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+  }
+
+  .collapsible__footer .collapsible__chevron {
+    display: none;
+  }
+
+  .footerLogo {
+    order: -1;
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+
+  .footerLogo > img {
+    margin-bottom: 1.5rem;
+  }
+}
+/* Footer Section End */
