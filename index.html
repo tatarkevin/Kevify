@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="/CSS/normalize.css" />
     <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/Animations.css" />
   </head>
 
   <body>
@@ -44,14 +45,18 @@
 
     <section class="block block--dark block--skewed-left hero">
       <div class="container grid grid--cols-2">
-        <div class="hero__content">
+        <div class="hero__content rotate-down-anim">
           <h1>Cloud Hosting for Pros</h1>
           <p class="hero__tagline">
             Deploy your Website in less than 60 seconds.
           </p>
           <a href="#" class="btn btn--accent btn--stretched">Get Started</a>
         </div>
-        <img class="hero__image" src="/Images/banner.png" alt="" />
+        <img
+          class="hero__image rotate-up-anim"
+          src="/Images/banner.png"
+          alt=""
+        />
       </div>
     </section>
 
@@ -94,7 +99,7 @@
 
     <section class="block container block-plans">
       <div class="grid grid--cols-3">
-        <div class="plan">
+        <div class="plan swipe-left-anim">
           <div class="card card--secondary">
             <header class="card__header">
               <h3 class="plan__name">Entry</h3>
@@ -116,8 +121,8 @@
             </div>
           </div>
         </div>
-    
-        <div class="plan plan__popular">
+
+        <div class="plan plan__popular pop-in-anim">
           <div class="card card--primary">
             <header class="card__header">
               <h3 class="plan__name">Entry</h3>
@@ -139,8 +144,8 @@
             </div>
           </div>
         </div>
-    
-        <div class="plan">
+
+        <div class="plan swipe-right-anim">
           <div class="card card--secondary">
             <header class="card__header">
               <h3 class="plan__name">Entry</h3>
@@ -340,7 +345,7 @@
           repudiandae!
         </p>
       </header>
-      <div class="container">
+      <div class="container rotate-left-anim">
         <div class="card testimonial">
           <div class="grid grid--cols-2">
             <div class="testimonial__image">
@@ -466,5 +471,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/Animations.js"></script>
   </body>
 </html>
