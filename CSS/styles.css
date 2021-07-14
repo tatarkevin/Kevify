@@ -285,7 +285,7 @@ a {
 
 @media screen and (min-width: 1140px) {
   .btn {
-    width: 200px;
+    padding: 2rem 5rem;
   }
 }
 /* Buttons end */
@@ -465,6 +465,12 @@ a {
 .quote {
   color: var(--color-body-darker);
   font-weight: 500;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.quote__text {
+  text-align: center;
 }
 
 .quote__text::before {
@@ -492,16 +498,19 @@ a {
   font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+  .quote__text {
+    font-size: 2.4rem;
+    text-align: left;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .quote__author {
     font-size: 2rem;
   }
   .quote__organization {
     font-size: 1.6rem;
-  }
-
-  .quote__text {
-    font-size: 2.4rem;
   }
 }
 /* Quotes End */
@@ -510,6 +519,10 @@ a {
 
 .grid {
   display: grid;
+}
+
+.grid--cols-2 {
+  grid-template-columns: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -529,10 +542,15 @@ a {
 
 .testimonial {
   padding: 3rem;
+  overflow: visible;
 }
 
 .testimonial__image {
   position: relative;
+}
+
+.testimonial__picture {
+  border-radius: 30px 0 30px 30px;
 }
 
 .testimonial__image > .icon-container {
@@ -654,6 +672,12 @@ a {
 .collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
 }
+
+@media screen and (min-width: 1140px) {
+  .collapsible__header {
+    margin-bottom: 2rem;
+  }
+}
 /* Collapsibles End */
 
 /* Blocks */
@@ -726,13 +750,12 @@ a {
   width: 100%;
   margin: 0;
   text-align: center;
-  padding-bottom: 1rem;
   max-height: 0;
   opacity: 0;
 }
 
 .nav__item {
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   border-bottom: 1px solid rgb(66, 66, 66);
 }
 
@@ -749,7 +772,7 @@ a {
 }
 
 .nav__toggler {
-  margin: 2rem;
+  margin: 1rem 2rem;
   opacity: 0.5;
   transition: box-shadow 0.15s;
   cursor: pointer;
@@ -979,6 +1002,10 @@ a {
   padding: 2rem;
   border-bottom: 1px solid rgb(66, 66, 66);
   width: 100%;
+}
+
+.collapsible--expanded .collapsible__content {
+  margin-top: 2rem;
 }
 
 .collapsible__footer li {

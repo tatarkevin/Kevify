@@ -15,46 +15,54 @@
 
     <link rel="stylesheet" href="/CSS/normalize.css" />
     <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
-    <section class="block container block-domain">
+    <section class="block">
       <header class="block__header">
-        <h2>The best webhosting Starting at 9$ per month</h2>
+        <h2>What our Customers say</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ut magni
-          nihil explicabo nostrum facilis repudiandae quisquam voluptate fugiat
-          error.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut hic
+          maxime saepe fugit pariatur dignissimos esse nihil ipsum repellat
+          repudiandae!
         </p>
       </header>
+      <div class="container">
+        <div class="card testimonial">
+          <div class="grid grid--cols-2">
+            <div class="testimonial__image">
+              <img src="/Images/testimonial.jpg" alt="A happy Customer" />
+              <span class="icon-container icon-container--accent">
+                <svg class="icon icon--small icon--white">
+                  <use xlink:href="../Icons/sprite.svg#quotes"></use>
+                </svg>
+              </span>
+            </div>
 
-      <div class="input-group">
-        <input
-          type="text"
-          class="input"
-          placeholder="Enter Domain name here..."
-        />
-        <button class="btn btn--accent btn--search">
-          <svg class="icon icon--primary">
-            <use xlink:href="../Icons/sprite.svg#search"></use>
-          </svg>
-          Search
-        </button>
+            <blockquote class="quote">
+              <p class="quote__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                temporibus quas modi quisquam est similique libero, totam
+                molestias tempore impedit!
+              </p>
+              <footer>
+                <div class="media">
+                  <div class="media__image quote__image">
+                    <svg class="icon icon--primary">
+                      <use xlink:href="../Icons/sprite.svg#line"></use>
+                    </svg>
+                  </div>
+                  <div class="media__body">
+                    <h3 class="media__title quote__author">Jhone Lumeo</h3>
+                    <p class="quote__organization">Mosh Company CEO</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
       </div>
-
-      <ul class="list block-domain__prices">
-        <li>
-          <span class="badge badge--secondary">.com $9</span>
-        </li>
-        <li>.sg $6</li>
-        <li>.space $11</li>
-        <li>.info $14</li>
-        <li>.net $10</li>
-        <li>.xyz $42</li>
-        <li>.abc $2</li>
-      </ul>
     </section>
-
-    <script src="/js/main.js"></script>
   </body>
 </html>
