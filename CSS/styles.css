@@ -1050,37 +1050,3 @@ a {
   }
 }
 /* Footer Section End */
-
-@keyframes swipe-left {
-  0% {
-    transform: translateX(-300px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.swipe-left-anim {
-  animation-name: swipe-left;
-  animation-duration: .5s;
-  animation-play-state: paused;
-}
-
-@keyframes swipe-right {
-  0% {
-    transform: translateX(300px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.swipe-right-anim {
-  animation-name: swipe-right;
-  animation-duration: .5s;
-  animation-play-state: paused;
-}
