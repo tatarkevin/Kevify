@@ -4,63 +4,173 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Deploy your Website in less than 60 seconds."
+    />
+    <meta property="og:description" content="Moshify.." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://moshified.com" />
+
+    <title>Moshify - Go Online for just 9$</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=optional"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="/CSS/normalize.css" />
     <link rel="stylesheet" href="/CSS/styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
-  <body>
-    <section class="block">
-      <header class="block__header">
-        <h2>What our Customers say</h2>
-        <p>
-          I bin da Hons Peta und i mog die Webseitn scho gern. Aiso die schaugt scho schmuck aus.
-        </p>
-      </header>
-      <div class="container">
-        <div class="card testimonial">
-          <div class="grid grid--cols-2">
-            <div class="testimonial__image">
-              <img src="/Images/testimonial.jpg" alt="A happy Customer" />
-              <span class="icon-container icon-container--accent">
-                <svg class="icon icon--small icon--white">
-                  <use xlink:href="../Icons/sprite.svg#quotes"></use>
-                </svg>
-              </span>
-            </div>
+  <body style="height: 700vh">
+    <header class="block--dark block-fixed headerBar">
+      <nav class="nav collapsible container">
+        <a class="logoFix" href="/"><img src="/Images/logo.svg" alt="" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="Icons/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Hosting</a></li>
+          <li class="nav__item"><a href="#">VPS</a></li>
+          <li class="nav__item"><a href="#">Domain</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
 
-            <blockquote class="quote">
-              <p class="quote__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                temporibus quas modi quisquam est similique libero, totam
-                molestias tempore impedit!
-              </p>
-              <footer>
-                <div class="media">
-                  <div class="media__image quote__image">
-                    <svg class="icon icon--primary">
-                      <use xlink:href="../Icons/sprite.svg#line"></use>
-                    </svg>
-                  </div>
-                  <div class="media__body">
-                    <h3 class="media__title quote__author">Jhone Lumeo</h3>
-                    <p class="quote__organization">Mosh Company CEO</p>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--cols-2">
+        <div class="hero__content swipe-left-anim">
+          <h1>Cloud Hosting for Pros</h1>
+          <p class="hero__tagline">
+            Deploy your Website in less than 60 seconds.
+          </p>
+          <a href="#" class="btn btn--accent btn--stretched">Get Started</a>
+        </div>
+        <img
+          class="hero__image swipe-right-anim"
+          src="/Images/banner.png"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section class="block container block-plans">
+      <div class="grid grid--cols-3">
+        <div class="plan swipe-left-anim">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <div class="plan__price-cycle-badge">
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--secondary badge--small">10% Off</span>
+              </div>
+              <span class="plan__description">Easy start on the cloud</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB RAM</li>
+              </ul>
+              <button class="btn btn--purple btn--block">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="plan plan__popular swipe-left-anim">
+          <div class="card card--primary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <div class="plan__price-cycle-badge">
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--primary badge--small">10% Off</span>
+              </div>
+              <span class="plan__description">Easy start on the cloud</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB RAM</li>
+              </ul>
+              <button class="btn btn--purple btn--block">Buy now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="plan swipe-right-anim">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <div class="plan__price-cycle-badge">
+                <span class="plan__price">$14</span>
+                <span class="plan__billing-cycle">/month</span>
+                <span class="badge badge--secondary badge--small">10% Off</span>
+              </div>
+              <span class="plan__description">Easy start on the cloud</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB RAM</li>
+              </ul>
+              <button class="btn btn--purple btn--block">Buy now</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <script src="js/main.js"></script>
+    <script>
+      const ElementsToBeAnimated = ["swipe-left-anim", "swipe-right-anim"];
+
+      var AllElementsToAnimate = new Array();
+
+      const scrollBarOffset = 300;
+
+      for (let i = 0; i < ElementsToBeAnimated.length; i++) {
+        let currentItem_i = ElementsToBeAnimated[i];
+        console.log("item: " + currentItem_i);
+        let ItemsToAnimate = document.getElementsByClassName(currentItem_i);
+        for (let j = 0; j < ItemsToAnimate.length; j++) {
+          let currentItem_j = ItemsToAnimate[j];
+          console.log("item_j: ");
+          console.log(currentItem_j);
+          AllElementsToAnimate.push(currentItem_j);
+        }
+      }
+
+      console.log(AllElementsToAnimate);
+
+      function animateOnScroll() {
+        for (let i = 0; i < AllElementsToAnimate.length; i++) {
+          let currentElement = AllElementsToAnimate[i];
+          let windowPos = window.scrollY + scrollBarOffset;
+          let elementPos = currentElement.offsetTop;
+          if (windowPos > elementPos) {
+            if (currentElement.style.animationPlayState !== "running") {
+              console.log("IM ANIMATED");
+              currentElement.style.animationPlayState = "running";
+            }
+          }
+        }
+      }
+
+      animateOnScroll();
+
+      window.onscroll = animateOnScroll;
+    </script>
   </body>
 </html>
