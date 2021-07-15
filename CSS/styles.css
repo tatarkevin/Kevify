@@ -417,7 +417,7 @@ a {
 }
 
 .plan__popular:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 1024px) {

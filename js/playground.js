@@ -2,6 +2,13 @@ const ElementsToBeAnimated = ["swipe-left-anim", "swipe-right-anim", "swipe-up-a
  "rotate-up-anim", "rotate-down-anim", "pop-in-anim", "rotate-left-anim", "rotate-right-anim",
   "rotate-right-pop-in-anim"];
 
+class ElementToAnimate{
+    constructor(Element, className){
+        this.Element = Element;
+        this.className = className;
+    }
+}
+
 var AllElementsToAnimate = new Array();
 const regex = new RegExp("\-anim");
 
@@ -24,7 +31,10 @@ let currentItem_i = ElementsToBeAnimated[i];
 let ItemsToAnimate = document.getElementsByClassName(currentItem_i);
     for (let j = 0; j < ItemsToAnimate.length; j++) {
         let currentItem_j = ItemsToAnimate[j];
-        AllElementsToAnimate.push(currentItem_j); //TODO: find function that avoids duplicates
+        AllElementsToAnimate.push(new ElementToAnimate(currentItem_j, currentItem_i)); //TODO: find function that avoids duplicates
+        //TODO: find a regex that cuts off the "s" from the duration and caluclate the ms
+        // let regexp = new RegExp("*."); 
+        console.log("AnimDur: " + window.getComputedStyle(currentItem_j).animationDuration);
     }
 }
 
@@ -39,47 +49,41 @@ function scrollToTop(){
 /* We check each element that has an animation class if it is visible
     in the lower 1/4 of the screen. If that is the case we set its
     animation state to "running" which starts the animation.*/ 
+var startTime = new Date();
+var EndTime = new Date();
+
+function removeClassOnAnimEnd(AnimObject){
+    AnimObject.Element.classList.remove(AnimObject.className);
+    AnimObject.Element.removeEventListener("animationend", removeClassOnAnimEnd);
+    // console.log(AnimObject.Element.classList);
+    EndTime = new Date();
+    console.log("Zeit Delta: " + (EndTime.getMilliseconds() - startTime.getMilliseconds()));
+}
     
 const winPos = (window.innerHeight * 0.7);
 function animateOnScroll2() {
-    // console.log("windowPos: " + (winPos));
     for (let i = 0; i < AllElementsToAnimate.length; i++) {
-        let currentElement = AllElementsToAnimate[i];
+        let currentElement = AllElementsToAnimate[i].Element;
         let elementPos = currentElement.getBoundingClientRect().top;
-        // console.log("ElementPos: " + elementPos);
             if (elementPos < winPos) {
                 if (currentElement.style.animationPlayState !== "running") {
                     currentElement.style.animationDirection = "normal";
                     currentElement.style.animationFillMode = "forwards";
                     currentElement.style.animationPlayState = "running";
+                    startTime = new Date();
+                    //TODO: i need to store the animationduration so i can use it for the timeout
+                    setTimeout(removeClassOnAnimEnd(AllElementsToAnimate[i]), currentElement.style.animationDuration);
+                    // currentElement.addEventListener("animationend", removeClassOnAnimEnd(AllElementsToAnimate[i]));
                 }
+
             }else if(elementPos > window.innerHeight){
-                /* If we scroll back above the animated Element
-                    i want its animation to be reset.*/
-                    //they said i have to remove the class
-                    //then trigger a dom reflow
-                    //then set a timeout to 1ms and re-add the class
-                    //to the element.
-                    //Also set the animationPlayState = "paused";
-                    if(currentElement.style.animationPlayState === "running"){
-                        // console.log("animationState: " + currentElement.style.animationPlayState);
-                        let classListOfCurrentElement = currentElement.classList;
-                        for(let j = 0; j < classListOfCurrentElement.length; j++){
-                            if((regex).test(classListOfCurrentElement[j])){
-                                const tempString = classListOfCurrentElement[j];
-
-                                classListOfCurrentElement.remove(tempString);
-                                // console.log(tempString + " removed");
-
-                                void currentElement.offsetHeight;
-                                classListOfCurrentElement.add(tempString);
-                                currentElement.style.animationPlayState = "paused";
-                                    // console.log(tempString + " added");
-                            }
-                        }
+                if(currentElement.style.animationPlayState === "running"){
+                    let classListOfCurrentElement = currentElement.classList;
+                        void currentElement.offsetHeight;
+                        classListOfCurrentElement.add(AllElementsToAnimate[i].className);
+                        currentElement.style.animationPlayState = "paused";
                     }
-                    
-            }
+                }    
     }
     console.log("-------------------------------------------------------------------------");
 }
