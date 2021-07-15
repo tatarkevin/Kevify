@@ -1,11 +1,12 @@
 .animFix {
   overflow: hidden;
   width: 100%;
+  animation-iteration-count: infinite;
 }
 
 @keyframes swipe-left {
   0% {
-    transform: translateX(-300px);
+    transform: translateX(300px);
     opacity: 0;
   }
   100% {
@@ -22,7 +23,7 @@
 
 @keyframes swipe-right {
   0% {
-    transform: translateX(300px);
+    transform: translateX(-300px);
     opacity: 0;
   }
   100% {
@@ -39,7 +40,7 @@
 
 @keyframes swipe-up {
   0% {
-    transform: translateY(50px);
+    transform: translateY(300px);
     opacity: 0;
   }
   100% {
@@ -50,6 +51,23 @@
 
 .swipe-up-anim {
   animation-name: swipe-up;
+  animation-duration: 0.3s;
+  animation-play-state: paused;
+}
+
+@keyframes swipe-down {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.swipe-down-anim {
+  animation-name: swipe-down;
   animation-duration: 0.3s;
   animation-play-state: paused;
 }

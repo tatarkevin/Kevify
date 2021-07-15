@@ -413,7 +413,7 @@ a {
 }
 
 .plan:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .plan__popular:hover {
@@ -541,6 +541,7 @@ a {
 
 .testimonial {
   padding: 3rem;
+  overflow: visible;
 }
 
 .testimonial__image {
