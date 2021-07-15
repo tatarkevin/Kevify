@@ -2,14 +2,14 @@ const ElementsToBeAnimated = ["swipe-left-anim", "swipe-right-anim", "swipe-up-a
  "rotate-up-anim", "rotate-down-anim", "pop-in-anim", "rotate-left-anim"];
 
 var AllElementsToAnimate = new Array();
-const scrollBarOffset = 350;
+const scrollBarOffset = 400;
 
 for (let i = 0; i < ElementsToBeAnimated.length; i++) {
 let currentItem_i = ElementsToBeAnimated[i];
 let ItemsToAnimate = document.getElementsByClassName(currentItem_i);
     for (let j = 0; j < ItemsToAnimate.length; j++) {
         let currentItem_j = ItemsToAnimate[j];
-        currentItem_j.classList.add("base-anim");
+        // currentItem_j.classList.add("base-anim");
         AllElementsToAnimate.push(currentItem_j);
     }
 }

@@ -330,7 +330,7 @@ a {
 /* Card */
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px #f3f3f3;
+  box-shadow: 0 0 20px 10px #dfdfdf;
   overflow: hidden;
 }
 
@@ -541,7 +541,6 @@ a {
 
 .testimonial {
   padding: 3rem;
-  overflow: visible;
 }
 
 .testimonial__image {
