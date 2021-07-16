@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.invisibility {
+  opacity: 0 !important;
+}
+
 @keyframes swipe-left {
   0% {
     transform: translateX(300px);
@@ -17,7 +21,7 @@
 .swipe-left-anim {
   animation-name: swipe-left;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes swipe-right {
@@ -34,7 +38,7 @@
 .swipe-right-anim {
   animation-name: swipe-right;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes swipe-up {
@@ -51,7 +55,7 @@
 .swipe-up-anim {
   animation-name: swipe-up;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes swipe-down {
@@ -68,7 +72,7 @@
 .swipe-down-anim {
   animation-name: swipe-down;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes rotate-up {
@@ -85,7 +89,7 @@
 .rotate-up-anim {
   animation-name: rotate-up;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes rotate-down {
@@ -102,7 +106,7 @@
 .rotate-down-anim {
   animation-name: rotate-down;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes pop-in {
@@ -118,7 +122,23 @@
 .pop-in-anim {
   animation-name: pop-in;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.zoom-out-anim {
+  animation-name: zoom-out;
+  animation-duration: 0.3s;
+  animation-play-state: running;
 }
 
 @keyframes rotate-left {
@@ -135,7 +155,7 @@
 .rotate-left-anim {
   animation-name: rotate-left;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes rotate-right {
@@ -152,11 +172,11 @@
 .rotate-right-anim {
   animation-name: rotate-right;
   animation-duration: 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 .rotate-right-pop-in-anim {
   /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
   animation: swipe-left 0.15s, pop-in 0.3s;
-  animation-play-state: paused;
+  animation-play-state: running;
 }

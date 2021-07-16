@@ -45,7 +45,7 @@
 
     <section class="block block--dark block--skewed-left hero">
       <div class="container grid grid--cols-2">
-        <div class="hero__content rotate-right-pop-in-anim">
+        <div class="hero__content pop-in-anim">
           <h1>Cloud Hosting for Pros</h1>
           <p class="hero__tagline">
             Deploy your Website in less than 60 seconds.
@@ -53,7 +53,7 @@
           <a href="#" class="btn btn--accent btn--stretched">Get Started</a>
         </div>
         <img
-          class="hero__image rotate-up-anim"
+          class="hero__image zoom-out-anim"
           src="/Images/banner.png"
           alt=""
         />
@@ -226,7 +226,7 @@
         />
       </article>
       <article class="grid grid--cols-2 feature">
-        <div class="media">
+        <div class="media swipe-right-anim">
           <div class="media__image">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -245,7 +245,11 @@
             <a href="#" class="link-arrow">Learn More</a>
           </div>
         </div>
-        <img class="block-features-image" src="/Images/wordpress.jpg" alt="" />
+        <img
+          class="block-features-image swipe-left-anim"
+          src="/Images/wordpress.jpg"
+          alt=""
+        />
       </article>
       <article class="grid grid--cols-2 feature">
         <div class="media rotate-right-anim">
@@ -267,7 +271,11 @@
             <a href="#" class="link-arrow">Learn More</a>
           </div>
         </div>
-        <img class="block-features-image" src="/Images/support.jpg" alt="" />
+        <img
+          class="block-features-image rotate-right-pop-in-anim"
+          src="/Images/support.jpg"
+          alt=""
+        />
       </article>
     </section>
     <section class="block block--dark block--skewed-right block-showcase">
@@ -276,9 +284,9 @@
       </header>
       <div class="container grid grid--cols-2">
         <picture class="block-showcase__image">
-          <img src="/Images/ipad.png" alt="" />
+          <img class="swipe-right-anim" src="/Images/ipad.png" alt="" />
         </picture>
-        <ul class="list">
+        <ul class="list swipe-up-anim">
           <li>
             <div class="media">
               <div class="media__image">
@@ -461,7 +469,12 @@
       </section>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!--
+      Apparently i have to put the animation js before every other js.
+      Else it won't work anymore.
+    -->
+
     <script src="js/Animations.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

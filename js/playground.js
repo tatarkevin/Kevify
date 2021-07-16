@@ -45,6 +45,12 @@ let ItemsToAnimate = document.getElementsByClassName(currentItem_i);
     }
 }
 
+// let regexp = new RegExp("([0-9]+\.[0-9]+?:[^0-9]*)*([0-9]+\.[0-9]+)*");
+/* let regexp = new RegExp("[0-9]+\.[0-9]+", "g");
+let testString = "0.87s, 0.343s, 0.27s";
+    console.log(testString.match(regexp)); */
+/* AllElementsToAnimate.forEach(item =>
+    console.log(item)); */
 
 /*This simply puts the screen back to top once the page is reloaded.
     Not really happy with this solution. */
