@@ -97,7 +97,7 @@ function animateOnScroll2() {
                     startTime = new Date();
                     setTimeout(function(){
                         removeClassOnAnimEnd(AllElementsToAnimate[i]);
-                    }, AllElementsToAnimate[i].animDur * 1000);
+                    }, AllElementsToAnimate[i].animDur * 1100);
                      //animDur is in seconds and i need milliseconds.
                 }
                 
