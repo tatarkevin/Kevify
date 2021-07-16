@@ -956,7 +956,7 @@ a {
   top: 2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1140px) {
   .feature:nth-of-type(even) .media {
     order: 2;
   }
