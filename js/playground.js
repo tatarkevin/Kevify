@@ -3,9 +3,10 @@ const ElementsToBeAnimated = ["swipe-left-anim", "swipe-right-anim", "swipe-up-a
   "rotate-right-pop-in-anim"];
 
 class ElementToAnimate{
-    constructor(Element, className){
+    constructor(Element, className, animDur){
         this.Element = Element;
         this.className = className;
+        this.animDur = animDur;
     }
 }
 
@@ -31,10 +32,16 @@ let currentItem_i = ElementsToBeAnimated[i];
 let ItemsToAnimate = document.getElementsByClassName(currentItem_i);
     for (let j = 0; j < ItemsToAnimate.length; j++) {
         let currentItem_j = ItemsToAnimate[j];
-        AllElementsToAnimate.push(new ElementToAnimate(currentItem_j, currentItem_i)); //TODO: find function that avoids duplicates
+        
+        //TODO: find function that avoids duplicates
         //TODO: find a regex that cuts off the "s" from the duration and caluclate the ms
-        // let regexp = new RegExp("*."); 
-        console.log("AnimDur: " + window.getComputedStyle(currentItem_j).animationDuration);
+        
+        /* console.log(regexp.test(window.getComputedStyle(currentItem_j).animationDuration));
+        console.log("Ha: " + (window.getComputedStyle(currentItem_j).animationDuration.match(regexp)));
+        console.log("AnimDur: " + window.getComputedStyle(currentItem_j).animationDuration); */
+        let regexp = new RegExp("[0-9]+\.[0-9]+"); //finds the animation duration and cuts off the "s"
+        let currentAnimDur = window.getComputedStyle(currentItem_j).animationDuration.match(regexp);
+        AllElementsToAnimate.push(new ElementToAnimate(currentItem_j, currentItem_i, currentAnimDur[0]));
     }
 }
 
@@ -72,7 +79,9 @@ function animateOnScroll2() {
                     currentElement.style.animationPlayState = "running";
                     startTime = new Date();
                     //TODO: i need to store the animationduration so i can use it for the timeout
-                    setTimeout(removeClassOnAnimEnd(AllElementsToAnimate[i]), currentElement.style.animationDuration);
+                    setTimeout(function(){
+                        removeClassOnAnimEnd(AllElementsToAnimate[i]);
+                    }, AllElementsToAnimate[i].animDur * 1100); //animDur is in seconds and i need milliseconds.
                     // currentElement.addEventListener("animationend", removeClassOnAnimEnd(AllElementsToAnimate[i]));
                 }
 
